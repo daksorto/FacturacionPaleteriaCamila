@@ -88,6 +88,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\dtsFacturacion.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsFacturacion.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +134,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Datos\dtsFacturacion.xsc">
+      <DependentUpon>dtsFacturacion.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\dtsFacturacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsFacturacion.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\dtsFacturacion.xss">
+      <DependentUpon>dtsFacturacion.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -139,15 +155,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Datos\DBFacturacion.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Datos\DBFacturacion_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>DBFacturacion.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Cad\" />
